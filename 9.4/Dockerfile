@@ -40,10 +40,10 @@ RUN apt-get update \
 RUN mkdir -p /var/run/postgresql && chown -R postgres /var/run/postgresql
 
 # PLv8
-RUN apt-get update && apt-get install -y postgresql-9.4-plv8 && rm -rf /var/lib/apt/lists/* \
+RUN apt-get update && apt-get install -y postgresql-9.4-plv8 && rm -rf /var/lib/apt/lists/*
 
 # Vim
-RUN apt-get update && apt-get install -y vim && rm -rf /var/lib/apt/lists/* \
+RUN apt-get update && apt-get install -y vim && rm -rf /var/lib/apt/lists/*
 
 ENV PATH /usr/lib/postgresql/$PG_MAJOR/bin:$PATH
 ENV PGDATA /var/lib/postgresql/data
